@@ -333,7 +333,7 @@ a:visited {
 #playerL, #playerR {
   /* bottom:100%;
   position: relative; */
-  grid-row: 6/7;
+  grid-row: 5/7;
   width: 25vw;
 }
 
