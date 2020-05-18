@@ -60,9 +60,10 @@ body {
 }
 
 .loading.button>div {
-  width: 50px;
-  height: 50px;
-  margin: 50px auto;
+  width: 4em;
+  height: 4em;
+  margin: 7vw auto;
+  margin-bottom: 2em;
   background-color: #7e1083;
   border-radius: 100%;
   -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;

@@ -258,7 +258,7 @@ function display() {
     return `<p title="${charTooltip}">${charName}</p>`;
   };
 
-  // progressBar(`Battle No. ${battleNo}`, percent);
+  progressBar(`Battle No. ${battleNo}`, percent);
 
   document.querySelector('.left.sort.image').src = leftChar.img;
   document.querySelector('.right.sort.image').src = rightChar.img;
@@ -749,6 +749,7 @@ function preloadImages() {
     canvas.height = img.naturalHeight;
     canvas.getContext('2d').drawImage(img, 0, 0);
     characterDataToSort[idx].img = canvas.toDataURL();
+    progressBar(`Loading Image ${++imagesLoaded}`, Math.floor(imagesLoaded * 100 / totalLength));
   };
 
   const promises = characterDataToSort.map((char, idx) => loadImage(imageRoot + char.img, idx));
