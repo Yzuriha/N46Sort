@@ -745,7 +745,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"硬い殻のように抱きしめたい",
-      "name":"",
+      "name":"Katai Kara no You ni Dakishimetai",
       "Single":"",
       "Album":"Umaretekara Hajimete Mita Yume",
       "img":"2vOwECY.jpg",
