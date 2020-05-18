@@ -278,8 +278,10 @@ function display() {
     rightChar.name = rightChar.nameKanji
   }
 
-  document.querySelector('.left.sort.text').innerHTML = charNameDisp(leftChar.name);
-  document.querySelector('.right.sort.text').innerHTML = charNameDisp(rightChar.name);
+  document.querySelector('.left.sort.text > p.toHide').innerHTML = charNameDisp(leftChar.name);
+  document.querySelector('.left.sort.text > p.toShow').innerHTML = charNameDisp(leftChar.nameKanji);
+  document.querySelector('.right.sort.text > p.toHide').innerHTML = charNameDisp(rightChar.name);
+  document.querySelector('.right.sort.text > p.toShow').innerHTML = charNameDisp(rightChar.nameKanji);
 
   /** Autopick if choice has been given. */
   if (choices.length !== battleNo - 1) {

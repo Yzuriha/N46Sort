@@ -100,6 +100,23 @@ body {
   }
 }
 
+.toHide, .toShow {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.toShow {
+  opacity: 0;
+  margin-top: -1.5em !important;
+}
+
+.left.sort.text:hover .toHide, .right.sort.text:hover .toHide {
+  opacity: 0;
+}
+
+.left.sort.text:hover .toShow, .right.sort.text:hover .toShow {
+  opacity: 1;
+}
+
 .sorter>.image {
   width: 25vw;
   height: 25vw;
