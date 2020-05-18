@@ -286,7 +286,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"ダンケシェーン",
-      "name":"DANKESHEEN",
+      "name":"Dankeschen",
       "Single":"Kidzuitara Kataomoi",
       "Album":"Toumei na Iro",
       "img":"yzZIfHJ.jpg",

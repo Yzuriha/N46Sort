@@ -206,16 +206,37 @@ label:hover {
 .results {
   font-size: 0.75em;
   display: flex;
-  align-content: flex-start;
+  /* align-content: flex-start; */
   width: 80%;
   margin: 2em auto;
 }
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 1700px) {
   .results {
     flex-flow: column wrap;
-    max-height: calc(5 * (195px + 2px) + 1 * (15px + 2px));
+    max-height: calc(5 * (124px + 2px) + 1 * (15px + 2px));
     /* 2px for borders */
+  }
+}
+
+@media all and (min-width: 1400px) and (max-width: 1699px) {
+  .results {
+    flex-flow: column wrap;
+    max-height: calc(5 * (165px + 2px) + 1 * (15px + 2px));
+  }
+}
+
+@media all and (min-width: 1100px) and (max-width: 1399px) {
+  .results {
+    flex-flow: column wrap;
+    max-height: calc(5 * (182px + 2px) + 1 * (15px + 2px));
+  }
+}
+
+@media all and (min-width: 601px) and (max-width: 1099px) {
+  .results {
+    flex-flow: column wrap;
+    max-height: calc(5 * (247px + 2px) + 1 * (15px + 2px));
   }
 }
 
