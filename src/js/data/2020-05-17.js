@@ -250,7 +250,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"キャラバンは眠らない",
-      "name":"",
+      "name":"Caravan wa Nemuranai",
       "Single":"Kaerimichi wa Toomawari Shitaku Naru",
       "Album":"Ima ga Omoide ni Naru Made",
       "img":"iH8o67w.jpg",
@@ -376,7 +376,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"ごめんね、スムージー",
-      "name":"",
+      "name":"Gomen ne, Smoothie",
       "Single":"",
       "Album":"Umaretekara Hajimete Mita Yume",
       "img":"CW6pQSX.jpg",
@@ -385,7 +385,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"ゴルゴンゾーラ",
-      "name":"",
+      "name":"Gorgonzola",
       "Single":"",
       "Album":"Ima ga Omoide ni Naru Made",
       "img":"I3nwJcZ.jpg",
@@ -556,7 +556,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"I see…",
-      "name":"",
+      "name":"I see…",
       "Single":"Shiawase no Hogosyoku",
       "Album":"",
       "img":"uzkvWNf.jpg",
@@ -727,7 +727,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"環状六号線",
-      "name":"",
+      "name":"Kanjou Rokugousen",
       "Single":"",
       "Album":"Sorezore no Isu",
       "img":"64Zxs4K.jpg",
@@ -997,7 +997,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"満月が消えた",
-      "name":"",
+      "name":"Mangetsu ga Kieta",
       "Single":"",
       "Album":"Umaretekara Hajimete Mita Yume",
       "img":"2vOwECY.jpg",
@@ -1006,7 +1006,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"醜い私",
-      "name":"",
+      "name":"Minikui Watashi",
       "Single":"",
       "Album":"Umaretekara Hajimete Mita Yume",
       "img":"CW6pQSX.jpg",
@@ -1213,7 +1213,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"思い出ファースト",
-      "name":"",
+      "name":"Omoide First",
       "Single":"",
       "Album":"Umaretekara Hajimete Mita Yume",
       "img":"a1Xe1eV.jpg",
@@ -1447,7 +1447,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"君が扇いでくれた",
-      "name":"",
+      "name":"Kimi ga Aoi de Kureta",
       "Single":"",
       "Album":"Umaretekara Hajimete Mita Yume",
       "img":"a1Xe1eV.jpg",
@@ -1501,7 +1501,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"失恋お掃除人",
-      "name":"",
+      "name":"Shitsuren wo Shoji Hito",
       "Single":"Itsuka Dekirukara Kyou Dekiru",
       "Album":"",
       "img":"b9up7iq.jpg",
@@ -1528,7 +1528,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"設定温度",
-      "name":"",
+      "name":"Settei Ondo",
       "Single":"",
       "Album":"Umaretekara Hajimete Mita Yume",
       "img":"a1Xe1eV.jpg",
@@ -1564,7 +1564,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"空扉",
-      "name":"",
+      "name":"Sora Tobira",
       "Single":"Jikochuu de Ikou!",
       "Album":"",
       "img":"4QyBFHg.jpg",
@@ -1771,7 +1771,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"ワタボコリ",
-      "name":"",
+      "name":"Watabokori",
       "Single":"",
       "Album":"Umaretekara Hajimete Mita Yume",
       "img":"2vOwECY.jpg",
