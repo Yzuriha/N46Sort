@@ -12,38 +12,6 @@ body {
   margin-top: 20vh;
 }
 
-.progress {
-  /* margin: 1em auto;
-  width: 500px;
-  display: none; */
-  /* display: block;
-  grid-column: 2/3;
-  grid-row: 7/8; */
-}
-
-.progressbar {
-  position: relative;
-  /* width: 100%; */
-  /* border: 5px solid #7e1083; */
-  /* padding: 3px; */
-  /* margin: 2px 0px; */
-}
-
-.progresstext {
-  position: absolute;
-  /* width: 100%; */
-  margin: 3px 0px;
-  text-align: center;
-  font-size: 0.7em;
-}
-
-.progressfill {
-  height: 20px;
-  background: linear-gradient(45deg, #f3e9f500 0%,#7e1083 100%);
-  width: 0%;
-  transition: width 0.5s ease-in-out;
-}
-
 .sorter {
   margin: 0px auto;
   display: grid;
@@ -59,8 +27,17 @@ body {
   grid-column: 2 / 3;
   cursor: pointer;
   border-radius: 15px;
-  /* margin: auto 0; */
-  box-shadow: 0px 0px 27.5px 0px rgba(66,20,69,1) !important;
+  position: relative;
+  font-weight: bolder;
+  box-shadow: 0px 0px 27.5px 0px rgba(66, 20, 69, 1) !important;
+}
+
+.button p {
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
 }
 
 .starting.start.button {
@@ -82,26 +59,27 @@ body {
   display: none;
 }
 
-.loading.button > div {
-  width: 25px;
-  height: 25px;
+.loading.button>div {
+  width: 50px;
+  height: 50px;
   margin: 50px auto;
-  background-color: #333;
-
+  background-color: #7e1083;
   border-radius: 100%;
   -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
   animation: sk-scaleout 1.0s infinite ease-in-out;
 }
 
 /* Animation taken from: http://tobiasahlin.com/spinkit/ */
-
-.loading.button > span {
+.loading.button>span {
   margin: auto auto 20%;
-  font-size: 0.7em;
+  font-size: 1em;
 }
 
 @-webkit-keyframes sk-scaleout {
-  0% { -webkit-transform: scale(0) }
+  0% {
+    -webkit-transform: scale(0)
+  }
+
   100% {
     -webkit-transform: scale(1.0);
     opacity: 0;
@@ -112,14 +90,16 @@ body {
   0% {
     -webkit-transform: scale(0);
     transform: scale(0);
-  } 100% {
+  }
+
+  100% {
     -webkit-transform: scale(1.0);
     transform: scale(1.0);
     opacity: 0;
   }
 }
 
-.sorter > .image {
+.sorter>.image {
   width: 25vw;
   height: 25vw;
   margin: auto;
@@ -129,13 +109,13 @@ body {
   border-radius: 15px;
 }
 
-.sorter > .text {
+.sorter>.text {
   width: 25vw;
   height: 60px;
   display: none;
 }
 
-.sorter > .text > p {
+.sorter>.text>p {
   margin: 0.5em 5px 0px;
   width: calc(100%-10px);
   text-align: center;
@@ -144,26 +124,22 @@ body {
   font-weight: bold
 }
 
-.sorter > .left, #playerL{
+.sorter>.left, #playerL {
   grid-column: 1 / 2;
 }
 
-.sorter > .right, #playerR {
+.sorter>.right, #playerR {
   grid-column: 3 / 4;
 }
 
-/* .sorter > .left, .sorter > .right {
-  border: 5px solid #7e1083;
-} */
-
 img.left, img.right {
   border: 3px solid #7e1083;
-  box-shadow: 0px 0px 27.5px 0px rgba(66,20,69,1) !important;
- transition: all 0.6s ease;
+  box-shadow: 0px 0px 27.5px 0px rgba(66, 20, 69, 1) !important;
+  transition: all 0.6s ease;
 }
 
 img:hover {
-    border: 3px solid #d4a2dc;
+  border: 3px solid #d4a2dc;
 }
 
 .options {
@@ -175,7 +151,7 @@ img:hover {
   width: 450px;
 }
 
-.options > div {
+.options>div {
   font-size: 0.5625em;
 }
 
@@ -187,7 +163,7 @@ label:hover {
   color: #990000;
 }
 
-.options > .large.option, .options > hr {
+.options>.large.option, .options>hr {
   grid-column: span 3;
   text-align: center;
   width: 100%;
@@ -202,7 +178,7 @@ label:hover {
 }
 
 .time.taken {
-  margin-top: 0.5em;
+  margin-top: 2.5em;
   width: 500px;
   display: none;
   text-align: center;
@@ -220,7 +196,7 @@ label:hover {
 @media all and (min-width: 600px) {
   .results {
     flex-flow: column wrap;
-    max-height: calc(5 * (175px + 2px) + 1 * (15px + 2px));
+    max-height: calc(5 * (195px + 2px) + 1 * (15px + 2px));
     /* 2px for borders */
   }
 }
@@ -255,29 +231,29 @@ label:hover {
 }
 
 .result.head {
-  background-color: #b473c9;
-  color: #FFF;
+  color: #7e1083;
+  font-weight: bolder;
 }
 
-.result > .left {
+.result>.left {
   width: 35px;
   padding: 1px 3px 1px 0.5em;
   grid-column: 1 / 2;
-  text-align: right;
+  text-align: center;
 }
 
 .result.image .left {
   position: relative;
 }
 
-.result.image > .left span {
+.result.image>.left span {
   position: absolute;
   top: 50%;
   right: 3px;
   margin-top: -0.375em;
 }
 
-.result > .right {
+.result>.right {
   width: 160px;
   padding: 1px 0em 1px 0em;
   grid-column: 2 / 3;
@@ -330,22 +306,21 @@ a:visited {
   display: none;
 }
 
-
-.button {
+.progressbar {
   position: relative;
-  font-weight: bolder;
-  /* transition: all 0.6s ease; */
 }
 
-.button p{
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+.progresstext {
   position: absolute;
+  margin: 3px 0px;
+  text-align: center;
+  font-size: 0.7em;
 }
 
-/* .button:hover {
-  background-color: #7e1083;
-  color: #fad9ff;
-} */
+.progressfill {
+  height: 20px;
+  background: linear-gradient(45deg, #f3e9f500 0%, #7e1083 100%);
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+  border-radius: 0 10px 10px 0;
+}
