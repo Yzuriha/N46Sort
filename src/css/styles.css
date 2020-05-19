@@ -3,6 +3,7 @@ body {
   font-size: 16px;
   background: linear-gradient(to bottom right, #ac49bb, #b968c559);
   color: #7e1083;
+  height: 100%;
 }
 
 .container {
