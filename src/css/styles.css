@@ -53,6 +53,7 @@ body {
 .sorting.button, .finished.button {
   grid-row: span 2;
   display: none;
+  transition: all 0.3s ease;
 }
 
 .loading.button {
@@ -357,6 +358,10 @@ a:visited {
 
 .none {
   display: none;
+}
+
+.hover {
+  border: 3px solid #d4a2dc !important;
 }
 
 .progressbar {

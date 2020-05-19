@@ -82,22 +82,41 @@ function init() {
     if (timestamp && !timeTaken && !loading && choices.length === battleNo - 1) {
       switch (e.which) {
         case 38:
-          pick('tie');
+          $('.sorting.tie.button').addClass("hover")
+          setTimeout(function() {
+            $('.sorting.tie.button').removeClass("hover")
+            pick('tie');
+          }, 200);
           break;
         case 40:
-          undo();
+          $('.sorting.undo.button').addClass("hover")
+          setTimeout(function() {
+            $('.sorting.undo.button').removeClass("hover")
+            undo();
+          }, 200);
           break;
         case 39:
-          pick('right')
+          $('.right.sort.image').addClass("hover")
+          setTimeout(function() {
+            $('.right.sort.image').removeClass("hover")
+            pick('left')
+          }, 200);
           break;
         case 37:
-          pick('left')
+          $('.left.sort.image').addClass("hover")
+          setTimeout(function() {
+            $('.left.sort.image').removeClass("hover")
+            pick('left')
+          }, 200);
           break;
         case 88:
           playPauseL();
           break;
         case 67:
-        playPauseR();
+          playPauseR();
+          break;
+        case 83:
+          saveProgress('Progress');
           break;
         default:
           return;
