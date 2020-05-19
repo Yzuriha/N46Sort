@@ -77,70 +77,64 @@ function init() {
 
 
   /** Define keyboard controls (up/down/left/right vimlike k/j/h/l). */
-  document.addEventListener('keypress', (ev) => {
+  document.addEventListener("keydown", function(e) {
     /** If sorting is in progress. */
     if (timestamp && !timeTaken && !loading && choices.length === battleNo - 1) {
-      switch (ev.key) {
-        case 's':
-        case '3':
-          saveProgress('Progress');
-          break;
-        case 'h':
-        case 'ArrowLeft':
-          pick('left');
-          break;
-        case 'l':
-        case 'ArrowRight':
-          pick('right');
-          break;
-        case 'k':
-        case '1':
-        case 'ArrowUp':
+      switch (e.which) {
+        case 38:
           pick('tie');
           break;
-        case 'j':
-        case '2':
-        case 'ArrowDown':
+        case 40:
           undo();
           break;
-        default:
+        case 39:
+          pick('right')
           break;
-      }
-    }
-    /** If sorting has ended. */
-    else if (timeTaken && choices.length === battleNo - 1) {
-      switch (ev.key) {
-        case 'k':
-        case '1':
-          saveProgress('Last Result');
+        case 37:
+          pick('left')
           break;
-        case 'j':
-        case '2':
-          generateImage();
+        case 88:
+          playPauseL();
           break;
-        case 's':
-        case '3':
-          generateTextList();
+        case 67:
+        playPauseR();
           break;
         default:
-          break;
+          return;
       }
+      e.preventDefault();
+    } else if (timeTaken && choices.length === battleNo - 1) { /** If sorting has ended. */
     } else { // If sorting hasn't started yet.
-      switch (ev.key) {
-        case '1':
-        case 's':
-        case 'Enter':
-          start();
-          break;
-        case '2':
-        case 'l':
-          loadProgress();
-          break;
-        default:
-          break;
-      }
+        switch (e.which) {
+          case 13:
+            start();
+            break;
+          case 76:
+            loadProgress();
+          default:
+            return;
+        }
+        e.preventDefault();
     }
   });
+
+  function playPauseL() {
+    var lAudio = $('#audioL').get(0);
+    if (lAudio.paused == false) {
+      lAudio.pause();
+    } else {
+      lAudio.play();
+    }
+  }
+
+  function playPauseR() {
+    var rAudio = $('#audioR').get(0);
+    if (rAudio.paused == false) {
+      rAudio.pause();
+    } else {
+      rAudio.play();
+    }
+  }
 
   /** Show load button if save data exists. */
   if (storedSaveType) {
