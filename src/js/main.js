@@ -109,10 +109,10 @@ function init() {
             pick('left')
           }, 200);
           break;
-        case 88: case 33:
+        case 88: case 33: case 78:
           playPauseL();
           break;
-        case 67: case 34:
+        case 67: case 34: case 77:
           playPauseR();
           break;
         case 83:
