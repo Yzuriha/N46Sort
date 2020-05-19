@@ -101,7 +101,7 @@ body {
 }
 
 .toHide, .toShow {
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .toShow {
@@ -312,10 +312,11 @@ label:hover {
 }
 
 a {
-  color: #990000;
-  font-weight: bold;
+  color: #7d2982;
+  font-weight: bolder;
   text-decoration: none;
   cursor: pointer;
+  font-size: 13px;
 }
 
 a:hover {
@@ -327,18 +328,27 @@ a:visited {
 }
 
 #audioL, #audioR {
-  width: 100%;
+  /* width: 100%; */
 }
 
 #playerL, #playerR {
   /* bottom:100%;
   position: relative; */
-  grid-row: 5/7;
-  width: 25vw;
+  grid-row: 6;
+  width: 100%;
+  /* grid-row: span 2; */
+  max-width: 25vw;
+  margin: auto;
+  margin-bottom: 2;
+  border-radius: 0 0 10px 10px;
+  background: rgb(126,16,131);
+  background: linear-gradient(0deg, rgba(126,16,131,1) 0%, rgba(126,16,131,0) 100%);
 }
 
 #playerR {
   grid-column: 3/4;
+  z-index: 1;
+  margin-bottom: 2;
 }
 
 .none {
@@ -363,4 +373,36 @@ a:visited {
   width: 0%;
   transition: width 0.5s ease-in-out;
   border-radius: 0 10px 10px 0;
+}
+
+.tie {
+  grid-row: 1/3;
+}
+
+.undo{
+  grid-row: 3/5;
+}
+
+.savePrg {
+  grid-row: 5/7;
+}
+
+.moreInfMobile {
+  display: none;
+}
+
+/* Landscape */
+@media only screen
+  and (max-device-width: 736px) {
+    .moreInf {
+      display: none;
+    }
+
+    .moreInfMobile{
+      display: block;
+    }
+}
+
+.plyr [data-plyr=airplay], .plyr [data-plyr=captions], .plyr [data-plyr=fullscreen], .plyr [data-plyr=pip]{
+  display: none !important;
 }
