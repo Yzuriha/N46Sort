@@ -99,7 +99,7 @@ function init() {
           $('.right.sort.image').addClass("hover")
           setTimeout(function() {
             $('.right.sort.image').removeClass("hover")
-            pick('left')
+            pick('right')
           }, 200);
           break;
         case 37:
@@ -109,10 +109,10 @@ function init() {
             pick('left')
           }, 200);
           break;
-        case 88:
+        case 88: case 33:
           playPauseL();
           break;
-        case 67:
+        case 67: case 34:
           playPauseR();
           break;
         case 83:
