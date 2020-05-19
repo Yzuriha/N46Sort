@@ -258,7 +258,7 @@ function display() {
     return `<p title="${charTooltip}">${charName}</p>`;
   };
 
-  progressBar(`Battle No. ${battleNo}`, percent);
+  progressBar(`#${battleNo}`, percent);
 
   document.querySelector('.left.sort.image').src = leftChar.img;
   document.querySelector('.right.sort.image').src = rightChar.img;
@@ -465,7 +465,7 @@ function recordData(sortType) {
 function progressBar(indicator, percentage) {
   // document.querySelector('.progressbattle').innerHTML = indicator;
   document.querySelector('.progressfill').style.width = `${percentage}%`;
-  document.querySelector('.progresstext').innerHTML = `${percentage}%`;
+  document.querySelector('.progresstext').innerHTML = `${indicator} - ${percentage}%`;
 }
 
 /**
@@ -606,7 +606,7 @@ function generateImage() {
 
     imgButton.removeEventListener('click', generateImage);
     imgButton.innerHTML = '';
-    imgButton.insertAdjacentHTML('beforeend', `<a href="${dataURL}" download="${filename}">Download Image</a><br><br>`);
+    imgButton.insertAdjacentHTML('beforeend', `<a class="dwn" href="${dataURL}" download="${filename}">Download Image</a><br><br>`);
 
     resetButton.insertAdjacentText('beforeend', 'Reset');
     resetButton.addEventListener('click', (event) => {
@@ -751,7 +751,7 @@ function preloadImages() {
     canvas.height = img.naturalHeight;
     canvas.getContext('2d').drawImage(img, 0, 0);
     characterDataToSort[idx].img = canvas.toDataURL();
-    progressBar(`Loading Image ${++imagesLoaded}`, Math.floor(imagesLoaded * 100 / totalLength));
+    progressBar(`Loading Image ${++imagesLoaded} of ${totalLength}`, Math.floor(imagesLoaded * 100 / totalLength));
   };
 
   const promises = characterDataToSort.map((char, idx) => loadImage(imageRoot + char.img, idx));
