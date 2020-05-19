@@ -74,7 +74,7 @@ function init() {
   document.querySelector('.clearsave').addEventListener('click', clearProgress);
 
   const players = Array.from(document.querySelectorAll('.js-player')).map(p => new Plyr(p));
-
+ 
 
   /** Define keyboard controls (up/down/left/right vimlike k/j/h/l). */
   document.addEventListener("keydown", function(e) {
