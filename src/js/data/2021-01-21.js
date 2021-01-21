@@ -1915,7 +1915,7 @@ dataSet[dataSetVersion].characterData =
    },
    {
       "nameKanji":"Wilderness world",
-      "name":"~Wilderness world",
+      "name":"Wilderness world",
       "Single":"Boku wa Boku wo Suki ni Naru",
       "Album":"",
       "img":"6bwFZgt.jpg",
